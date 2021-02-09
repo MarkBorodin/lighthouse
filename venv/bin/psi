@@ -1,8 +1,0 @@
-#!/home/mark/PycharmProjects/light_test/venv/bin/python
-# -*- coding: utf-8 -*-
-import re
-import sys
-from PythonPSI.main import psi
-if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
-    sys.exit(psi())
