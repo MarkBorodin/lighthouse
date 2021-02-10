@@ -13,12 +13,12 @@ class GetData(object):
         """get url and create commands"""
         self.url = url
         self.command_desktop = f'lighthouse {self.url} --only-categories=performance,accessibility,best-practices,seo --preset=desktop --chrome-flags="--headless" --output=json --output-path=./{self.file}'
-        self.command_mobile = f'lighthouse {self.url} --only-categories=performance,accessibility,best-practices,seo --form-factor=mobile --chrome-flags="--headless" --output=json --output-path=./{self.file}'
+        self.command_mobile = f'lighthouse {self.url} --only-categories=performance,accessibility,best-practices,seo -form-factor=mobile --screenEmulation.mobile --chrome-flags="--headless" --output=json --output-path=./{self.file}'
 
     def get_data(self, command):
         """get data and write to db"""
         os.system(command)
-        time.sleep(20)
+        time.sleep(30)
 
         with open(f'{self.file}', 'r') as f:
             js = f.read()

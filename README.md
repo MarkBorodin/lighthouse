@@ -2,6 +2,8 @@
 
 (Lighthouse must be installed - https://github.com/GoogleChrome/lighthouse)
 
+(npm install -g lighthouse)
+
 ### Setup
 
 clone repository:
