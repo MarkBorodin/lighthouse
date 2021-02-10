@@ -56,6 +56,16 @@ to create tables run file:
 create_db.py
 ```
 
-insert url to test.py and run this file
+next, you need to run on the command line:
+```
+python test.py your_url
+```
+for example:
+
+```
+python test.py https://www.sos-kinderdorf.ch/
+```
+
+the data will be written to the database
 
 ### Finish
